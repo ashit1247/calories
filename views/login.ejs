@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+
+  <h3>Please login here!</h3>
+  <form action="/login" method="post">
+    <input type="text" name="username" placeholder="Enter your username" style="margin:5px 0px"><br>
+    <input type="password" name="password" placeholder="Enter your password" style="margin:5px 0px"><br>
+    <button type="submit" name="button" class="addUser">Login</button>
+    <p>
+      Or
+    </p>
+    <a class="btn btn-block btn-social btn-google addUser" href="/auth/google" role="button">
+      <i class="fab fa-google"></i>
+      Sign In with Google
+    </a>
+    <p>Don't have an account?<a href="/register">Create here</a></p>
+  </form>
+</div>
+
+<%- include('footer'); -%>

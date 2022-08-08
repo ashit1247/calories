@@ -1,0 +1,36 @@
+<%- include('header'); -%>
+
+  <h3>List of your meals</h3>
+  <table class="table text-white">
+    <tr>
+      <th>Date</th>
+      <th>Meal Name</th>
+      <th>Calories (in KCal)</th>
+      <th>Action</th>
+    </tr>
+
+    <%mealList.forEach(function(meal){%>
+    <tr>
+      <td><%=meal.date%></td>
+      <td><%=meal.mealName%></td>
+      <td><%=meal.calories%></td>
+      <td>
+        <form action="/update" method="post">
+          <button type="submit" name="button" class="btn btn-light" style="margin:5px 0px" value="<%=meal._id%>">Edit</button>
+        </form>
+        <form action="/delete" method="post">
+          <button type="submit" name="button" class="btn btn-light" style="margin:5px 0px" value="<%=meal._id%>">Delete</button>
+        </form>
+      </td>
+    </tr>
+    <%})%>
+  </table><br>
+  <form action="/add" method="get" class="form-inline">
+    <button type="submit" name="button" class="btn btn-light" style="float:left; margin:0 7%">Add Meal</button>
+  </form>
+  <form action="/logout" method="get" class="form-inline">
+    <button type="submit" name="button" class="btn btn-light" style="float:left; margin:0 0 0 -60px">logout</button>
+  </form>
+</div>
+
+<%- include('footer'); -%>

@@ -1,0 +1,15 @@
+<%- include('header'); -%>
+
+  <h3>Add your meal!</h3>
+  <form action="/add" method="post">
+    <label for="date" class="addInput">Date:</label>
+    <input type="text" name="date" id="id"><br>
+    <label for="mealName" class="addInput">Meal name:</label>
+    <input type="text" name="mealName" id="mealName"><br>
+    <label for="calories" class="addInput">Calories (in KCal)</label>
+    <input type="text" name="calories" id="calories"><br>
+    <button type="submit" class="btn btn-primary" name="button" style="margin:5px 0px 0px 12%;border-radius:0px ">Add to Meal List</button>
+  </form>
+</div>
+
+<%- include('footer'); -%>
